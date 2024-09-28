@@ -1,0 +1,361 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(135deg, #f3ec78, #af4261);
+  font-family: 'Roboto', sans-serif;
+}
+
+.app-wrapper {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 600px;
+  max-width: 800px; 
+  width: 100%; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px; 
+  text-align: center; 
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  width: 100%; 
+}
+
+.input-wrapper input,
+.input-wrapper .react-datetime {
+  width: 100%; 
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.input-wrapper button {
+  padding: 10.5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex; 
+  align-items: center; 
+  gap: 5px; 
+  font-size: 20px; 
+}
+
+.input-wrapper button i {
+  font-size: 24px; 
+}
+
+.input-wrapper button:hover {
+  background-color: #218838;
+  transform: scale(1.05); 
+}
+
+.filter-sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-options button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.filter-options button:hover {
+  background-color: #dcdcdc; 
+  transform: scale(1.05);
+}
+
+.filter-options .active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+}
+
+.sort-options select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-left: 10px;
+}
+
+.todo-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.todo-text {
+  flex-grow: 1; 
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through; 
+  color: #aaa; 
+}
+
+.sort-options select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-left: 10px; 
+}
+
+.add-task-btn {
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.add-task-btn:hover {
+  transform: scale(1.1); 
+}
+
+.add-task-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-button-wrapper {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+  .todo-wrapper {
+      flex-direction: row; 
+      justify-content: space-between; 
+      align-items: flex-start; 
+  }
+
+  .todo-text {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .due-date {
+      font-size: 12px; 
+      color: #888; 
+      margin-top: 4px; 
+  }
+
+  .button-group {
+      display: flex;
+      gap: 10px; 
+  }
+
+  .edit-button,
+  .delete-button {
+      padding: 8px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .todo-wrapper {
+      flex-direction: row; 
+      justify-content: space-between; 
+  }
+
+  .todo-text {
+      font-size: 16px; 
+      margin-left: 10px;
+  }
+}
+
+@media (min-width: 901px) {
+  .todo-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .todo-text {
+      font-size: 18px; 
+      margin-left: 10px;
+  }
+
+  .button-group {
+      margin-top: 0; 
+  }
+
+  .edit-button,
+  .delete-button {
+      padding: 10px;
+  }
+}

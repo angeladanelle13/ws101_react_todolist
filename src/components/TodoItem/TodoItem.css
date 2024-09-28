@@ -1,0 +1,130 @@
+  .todo-wrapper:hover {
+    transform: translateY(-2px);
+  }
+  
+  .todo-text {
+    font-size: 16px;
+    flex-grow: 1;
+    color: #555;
+    margin-left: 10px; 
+  }
+  
+  .completed {
+    text-decoration: line-through; 
+    color: #aaa; 
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .edit-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .edit-button,
+  .delete-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .edit-button {
+    background-color: #ffc107;
+  }
+  
+  .edit-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05); 
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%; 
+    position: relative; 
+    transition: background-color 0.3s, border-color 0.3s; 
+  }
+  
+  .checkbox:checked {
+    background-color: #28a745; 
+    border-color: #28a745; 
+  }
+  
+  .checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 8px; 
+    height: 14px; 
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  
+  .checkbox:hover {
+    border-color: #28a745;
+  }
+  
+  
+  .task-name {
+    font-size: 18px;
+    margin-left: 6px;
+  }
+
+  .due-date {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .due-date span {
+    margin-left: 5px;
+  }
+
+  .confirm-button,
+.cancel-button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #28a745; 
+  transition: color 0.3s;
+}
+
+.confirm-button:hover {
+  color: #218838;
+}
+
+.cancel-button {
+  color: #dc3545;
+}
+
+.cancel-button:hover {
+  color: #c82333;
+}

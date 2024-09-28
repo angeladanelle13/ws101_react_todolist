@@ -1,0 +1,23 @@
+.no-tasks {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7; 
+  width: 100%; 
+  box-sizing: border-box; 
+  min-height: 400px;
+}
+
+.todo-list {
+  width: 100%; 
+  margin-top: 20px;
+  flex-grow: 1;
+}
